@@ -1,0 +1,25 @@
+from onedrive_client import OneDriveClient
+
+
+def sync_file(
+    local_file,
+    onedrive_folder,
+    overwrite,
+    client_id,
+    tenant_id
+):
+
+    client = OneDriveClient(
+        client_id=client_id,
+        tenant_id=tenant_id
+    )
+
+    client.authenticate()
+
+    result = client.upload_file(
+        local_file,
+        onedrive_folder,
+        overwrite
+    )
+
+    return result
