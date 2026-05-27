@@ -1,0 +1,1 @@
+rename from to .json_rnm into .json credentials e token
